@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+/*------------ LAYOUT -------------*/
+*{
+    margin: 0;
+    padding: 1;
+    border: 0;
+}
+:root{
+    --cor-primaria: #f06;
+    --texto: #fff;
+    --bg-padrao: #111;
+    --bg-destaque: #171717;
+    --font: 'Bebas Neue';
+
+}
+
+body{
+    background-color: var(--bg-padrao);
+    font-family: var(--font);
+}
+
+header{
+    display: flex;
+    background-color: var(--bg-destaque);
+}
+
+header span{
+    color: var(--cor-primaria);
+}
+
+#titulo{
+    padding-left: 20px;
+    color: var(--cor-primaria);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+}
+
+nav{
+    color: var(--texto);
+    font-size: 1.4rem;
+    line-height: 60px;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li{
+    list-style: none;
+    margin: .4rem ;
+}
+
+a{
+    color: var(--texto);
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#hero{
+    height: 19rem;
+    width: 100%;
+    position: relative;
+}
+
+#hero::before{
+    content: '';
+    height: 150%;
+    width: 100%;
+    background-image: url(/000\ -\ Imagens/000.jpg);
+    position: absolute;
+    background-size: cover;
+    background-position-y: -230px;
+    z-index: -1;
+    filter: opacity(.6);
+    box-shadow: inset 0 -100px 150px var(--bg-padrao);
+}
+
+#hero p{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 00;
+    font-size: 2.2rem;
+    line-height: 280px;
+    color: var(--texto);
+    text-shadow: 0px 4px 4px var(--bg-padrao);
+}
+
+
+h2{
+    color: var(--texto);
+}
+
+h4{
+    text-align: center;
+    color: #fff;
+}
+
+.secao-filmes{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 425px) {
+    header{
+        flex-direction: column;
+    }
+}
+/*------------LAYOUT FILMES-------------*/
+
+.banner-section{
+    background-color: black;
+    width: 100%;
+}
+.banner{
+    height: 350px;
+    opacity: 100%;
+    width: 100%;
+    box-shadow: inset 100px -300px 1000px 10px rgb(18, 18, 18);
+    display: flex;
+    justify-content: center;
+}   
+
+.banner-text{
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+}
+
+.description{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.box{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-content{
+    width: 60%;
+    padding-left: 50px;
+}
+
+
+/*-----LAYOUT ELENCO-----*/
+
+.elenco-movie{
+    background-color: black;
+    height: 470px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 20% 60%;
+
+}
+
+.action-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+    margin-left: 100px;
+}
+
+
+.action-buttons button{
+    text-decoration: none;
+    background-color: #FF0066;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #FFF;
+}
+
+.action-buttons button:hover{
+    background-color: #FFF;
+    color: #FF0066;
+    transition: 0.5s;
+}
+
+.elenco{
+    width: 1230px;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.elenco h1{
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+    text-align: start;
+}
+
+.box-elenco{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 80px;
+    width: 80%;
+}
+
+.card-elenco{
+    background-color: #2D2D2D;
+    width: 140px;
+    height: 150px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-elenco img{
+    width: 90px;
+    height: 120px;
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+
+}
+.card-elenco h3{
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 19px;
+text-align:center;
+letter-spacing: 0.04em;
+color: #FFFFFF;
+}
+
+.card-elenco h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #7a7a7a;
+}
+
+.details{
+    background-color: #2D2D2D;
+    height: 77%;
+    width: 80%;
+    grid-row-start:1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.title{
+    display: flex;
+}
+
+.bar{
+    background-color: #FF0066;
+    width: 5px;
+    height: 25px;
+}
+
+.details h1{
+    padding-left: 10px ;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    text-align: start;
+}
+
+.details h2{
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.details h3{
+    color: #7a7a7a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
